@@ -14,13 +14,20 @@ class Semaforo:
             self.cor = 'vermelho'
         print(f'O semáforo está {self.cor}')
 
-        def mudarTempo(self, novoTempo):
-            self.tempo = novoTempo
+    def mudarTempo(self, novoTempo):
+        self.tempo = novoTempo
+        print(f'O tempo de transição mudou para {self.tempo} segundos.')
 
 #Programa Principal
 
 s1 = Semaforo('vermelho', 2)
 
-for i in range(10):
+for i in range(5):
+    s1.mudarCor()
+    time.sleep(s1.tempo)
+
+s1.mudarTempo(5)
+
+for i in range(5):
     s1.mudarCor()
     time.sleep(s1.tempo)
