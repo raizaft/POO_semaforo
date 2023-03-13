@@ -20,14 +20,18 @@ class Semaforo:
 
 #Programa Principal
 
-s1 = Semaforo('vermelho', 2)
+s1 = Semaforo('vermelho', 5)
 
 for i in range(5):
+    for i in range(s1.tempo):
+        print(i)
+        time.sleep(1)
     s1.mudarCor()
-    time.sleep(s1.tempo)
 
-s1.mudarTempo(5)
+s1.mudarTempo(3)
 
 for i in range(5):
+    for i in range(s1.tempo):
+        print(i)
+        time.sleep(1)
     s1.mudarCor()
-    time.sleep(s1.tempo)
