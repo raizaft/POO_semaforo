@@ -24,7 +24,7 @@ s1 = Semaforo('vermelho', 5)
 
 for i in range(5):
     for i in range(s1.tempo):
-        print(i)
+        print(i+1)
         time.sleep(1)
     s1.mudarCor()
 
@@ -32,6 +32,6 @@ s1.mudarTempo(3)
 
 for i in range(5):
     for i in range(s1.tempo):
-        print(i)
+        print(i+1)
         time.sleep(1)
     s1.mudarCor()
